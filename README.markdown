@@ -14,9 +14,9 @@ A small gem used for looking up stuff from an LDAP server.
 
     # ldap_user.rb
     require 'yaml'
+    LDAPLookup::Importable.settings = YAML.load(File.read('./ldap.yml'))
     class LdapUser
       include LDAPLookup::Importable
-      importable_from_ldap(YAML.load(File.read('./ldap.yml')))
 
       attr_accessor :first_name, :last_name, :email
     end

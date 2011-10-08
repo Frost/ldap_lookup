@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "ldap_lookup"
-  s.version = "0.0.3"
+  s.version = "0.0.4"
   s.date = "2011-09-22"
   s.authors = ["Martin Frost"]
   s.email = "frost+github@ceri.se"

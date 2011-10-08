@@ -28,7 +28,6 @@ module LDAPLookup
           base: LDAPLookup::Importable.settings.base_dn)
 
         ldap.search(:filter => filter) do |match|
-          puts match
           item = new()
           LDAPLookup::Importable.settings.fields.send(:table).map do |key, value|
             item.send("#{key}=", match.send(value).first)

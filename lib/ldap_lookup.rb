@@ -22,8 +22,6 @@ module LDAPLookup
           Net::LDAP::Filter.eq(LDAPLookup::Importable.settings.fields.send(key), value)
         end.inject {|x,y| x&y }
 
-        puts filter
-
         ldap = Net::LDAP.new(
           host: LDAPLookup::Importable.settings.server,
           port: LDAPLookup::Importable.settings.port,

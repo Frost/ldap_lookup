@@ -9,5 +9,6 @@ Gem::Specification.new do |s|
   s.description = "Lookup various stuff from LDAP, for example user information"
   s.files = ["lib/ldap_lookup.rb"]
   s.require_paths = ["lib"]
+  s.add_dependency("net-ldap")
   s.add_development_dependency("ruby-debug19")
 end
